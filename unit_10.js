@@ -68,14 +68,7 @@ document.querySelector(".b-4").onclick = f4;
 // let ar5 =
 let ar5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function f5() {
-  let sum = 0;
-  let out5 = document.querySelector(".out-5");
-  for (let i = 0; i < ar5.length; i++) {
-    sum = sum = `${ar5[0]} ${ar5[2] } ${ar5[3]}`;
-    out5.innerHTML = sum;
-  }
-  
-  
+  document.querySelector(".out-5").innerHTML = ar5[0] + ar5[2] + ar5[3];
 }
 
 document.querySelector(".b-5").onclick = f5;
