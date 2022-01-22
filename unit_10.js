@@ -49,8 +49,11 @@ document.querySelector(".b-3").onclick = f3;
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
 // let ar4 =  // переменную обьявляем эту здесь!!!!
-
-function f4() {}
+let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function f4() {
+    
+    document.querySelector(".out-4").innerHTML = out4;
+}
 
 document.querySelector(".b-4").onclick = f4;
 
