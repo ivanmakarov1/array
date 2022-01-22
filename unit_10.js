@@ -51,9 +51,9 @@ document.querySelector(".b-3").onclick = f3;
 // let ar4 =  // переменную обьявляем эту здесь!!!!
 let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function f4() {
-    let out4 = document.querySelector(".out-4");
-    out4.innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}` 
-    //out4.innerHTML = ar4[0] + ' ' + ar4[3] + ' ' + ar4[8];
+  let out4 = document.querySelector(".out-4");
+  out4.innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
+  //out4.innerHTML = ar4[0] + ' ' + ar4[3] + ' ' + ar4[8];
 }
 
 document.querySelector(".b-4").onclick = f4;
@@ -66,14 +66,16 @@ document.querySelector(".b-4").onclick = f4;
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 8
 
 // let ar5 =
-let ar5 = [1,2,3,4,5,6,7,8,9,10];
+let ar5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function f5() {
   let sum = 0;
-  for (let i = 0; i < ar5.length; i++){
-    sum = sum + ar5[i];
-    sum.innerHTML = out5;
+  let out5 = document.querySelector(".out-5");
+  for (let i = 0; i < ar5.length; i++) {
+    sum = sum = `${ar5[0]} ${ar5[2] } ${ar5[3]}`;
+    out5.innerHTML = sum;
   }
-  let out5 = document.querySelector('.out-5')
+  
+  
 }
 
 document.querySelector(".b-5").onclick = f5;
