@@ -34,8 +34,10 @@ document.querySelector(".b-2").onclick = f2;
 // Тест допустим массив [1,2,3] вывод - 3
 
 // let ar3 =  // переменную обьявляем здесь!!!!
-
-function f3() {}
+let ar3 = [1, 2, 55, 767, 5, 686, 24, 45];
+function f3() {
+  document.querySelector(".out-3").innerHTML = ar3.length;
+}
 
 document.querySelector(".b-3").onclick = f3;
 
