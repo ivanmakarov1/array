@@ -80,8 +80,10 @@ document.querySelector(".b-5").onclick = f5;
 // Вывод в out-6
 
 // let ar6 =
-
-function f6() {}
+  let ar6 = ['ivan', 'Twins', '05.06.1984'];
+function f6() {
+  document.querySelector(".out-6").innerHTML = `${ar6[0]}  ${ar6[1]}  ${ar6[2]}`;
+}
 
 document.querySelector(".b-6").onclick = f6;
 
