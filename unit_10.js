@@ -80,9 +80,9 @@ document.querySelector(".b-5").onclick = f5;
 // Вывод в out-6
 
 // let ar6 =
-  let ar6 = ['ivan', 'Twins', '05.06.1984'];
+  let ar6 = ['ivan', 'Twins', 0.5, 0.6];
 function f6() {
-  document.querySelector(".out-6").innerHTML = `${ar6[0]}  ${ar6[1]}  ${ar6[2]}`;
+  document.querySelector(".out-6").innerHTML = `${ar6[0]}  ${ar6[1]}  ${ar6[2]} ${ar6[3]}`;
 }
 
 document.querySelector(".b-6").onclick = f6;
@@ -95,7 +95,14 @@ document.querySelector(".b-6").onclick = f6;
 
 let ar7 = ["china", "india", "brazil", "japan", "egypt"];
 
-function f7() {}
+function f7() {
+  ar7.push('italy','turkey','vietnam');
+  let out = "";
+  for(let i = 0; i < ar7.length; i++){
+    out += ar7[i] + " ";
+  }
+  document.querySelector(".out-7").innerHTML = out;
+}
 
 document.querySelector(".b-7").onclick = f7;
 
