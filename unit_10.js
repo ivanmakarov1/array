@@ -51,7 +51,9 @@ document.querySelector(".b-3").onclick = f3;
 // let ar4 =  // переменную обьявляем эту здесь!!!!
 let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function f4() {
-  document.querySelector(".out-4").innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
+  document.querySelector(
+    ".out-4"
+  ).innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
   //out4.innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
   //out4.innerHTML = ar4[0] + ' ' + ar4[3] + ' ' + ar4[8];
 }
@@ -80,9 +82,11 @@ document.querySelector(".b-5").onclick = f5;
 // Вывод в out-6
 
 // let ar6 =
-  let ar6 = ['ivan', 'Twins', 0.5, 0.6];
+let ar6 = ["ivan", "Twins", 0.5, 0.6];
 function f6() {
-  document.querySelector(".out-6").innerHTML = `${ar6[0]}  ${ar6[1]}  ${ar6[2]} ${ar6[3]}`;
+  document.querySelector(
+    ".out-6"
+  ).innerHTML = `${ar6[0]}  ${ar6[1]}  ${ar6[2]} ${ar6[3]}`;
 }
 
 document.querySelector(".b-6").onclick = f6;
@@ -96,9 +100,9 @@ document.querySelector(".b-6").onclick = f6;
 let ar7 = ["china", "india", "brazil", "japan", "egypt"];
 
 function f7() {
-  ar7.push('italy','turkey','vietnam');
+  ar7.push("italy", "turkey", "vietnam");
   let out = "";
-  for(let i = 0; i < ar7.length; i++){
+  for (let i = 0; i < ar7.length; i++) {
     out += ar7[i] + " ";
   }
   document.querySelector(".out-7").innerHTML = out;
@@ -115,7 +119,14 @@ document.querySelector(".b-7").onclick = f7;
 
 let ar8 = [];
 
-function f8() {}
+function f8() {
+  ar8.push((ar8[3] = 3.14), (ar8[4] = 17), (ar8[6] = 5));
+  let out = "";
+  for (let i = 0; i < ar8.length; i++) {
+    out += ar8[i] + "-";
+  }
+  document.querySelector(".out-8").innerHTML = out;
+}
 
 document.querySelector(".b-8").onclick = f8;
 
