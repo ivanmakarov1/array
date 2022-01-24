@@ -51,9 +51,7 @@ document.querySelector(".b-3").onclick = f3;
 // let ar4 =  // переменную обьявляем эту здесь!!!!
 let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function f4() {
-  document.querySelector(
-    ".out-4"
-  ).innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
+  document.querySelector(".out-4").innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
   //out4.innerHTML = `${ar4[0]}  ${ar4[3]}  ${ar4[8]}`;
   //out4.innerHTML = ar4[0] + ' ' + ar4[3] + ' ' + ar4[8];
 }
@@ -100,7 +98,10 @@ document.querySelector(".b-6").onclick = f6;
 let ar7 = ["china", "india", "brazil", "japan", "egypt"];
 
 function f7() {
-  ar7.push("italy", "turkey", "vietnam");
+  //ar7.push("italy", "turkey", "vietnam");
+  ar7[5] = "italy";
+  ar7[6] = "turkey";
+  ar7[7] = "vietnam";
   let out = "";
   for (let i = 0; i < ar7.length; i++) {
     out += ar7[i] + " ";
@@ -159,8 +160,11 @@ let ar10 = [100, 200, 300, 400, 700, 121];
 
 function f10() {
   let out = document.querySelector('.out-10');
-  let start = ar9.shift();
-  let end = ar9.pop();
+  //let start = ar9.shift();
+  //let end = ar9.pop();
+
+  let start = ar10[1];
+  let end = ar10[ar10.length - 1];
 
   let result = start + end;
   out.innerHTML = result;
