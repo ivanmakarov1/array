@@ -158,6 +158,12 @@ document.querySelector(".b-9").onclick = f9;
 let ar10 = [100, 200, 300, 400, 700, 121];
 
 function f10() {
+  let out = document.querySelector('.out-10');
+  let start = ar9.shift();
+  let end = ar9.pop();
+
+  let result = start + end;
+  out.innerHTML = result;
   
 }
 
