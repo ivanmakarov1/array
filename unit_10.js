@@ -160,9 +160,7 @@ let ar10 = [100, 200, 300, 400, 700, 121];
 
 function f10() {
   let out = document.querySelector('.out-10');
-  //let start = ar9.shift();
-  //let end = ar9.pop();
-
+  
   let start = ar10[1];
   let end = ar10[ar10.length - 1];
 
