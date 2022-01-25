@@ -127,9 +127,10 @@ function f8() {
   for (let i = 0; i < ar8.length; i++) {
     if (ar8[i]) {
       out += ar8[i] + "-";
-      document.querySelector(".out-8").innerHTML = out;
     }
   }
+  document.querySelector(".out-8").innerHTML = out;
+  document.querySelector(".out-8-1").innerHTML = ar8.length;
 }
 
 document.querySelector(".b-8").onclick = f8;
@@ -142,7 +143,14 @@ document.querySelector(".b-8").onclick = f8;
 
 let ar9 = [100, 200, 300, 400, 700, 121];
 
-function f9() {}
+function f9() {
+  //let out = document.querySelector('.out-9');
+  //let out = "";
+  for (let i = 0; i < ar9.length; i++) {
+    console.log(ar9.pop());
+  }
+    
+}
 
 document.querySelector(".b-9").onclick = f9;
 
