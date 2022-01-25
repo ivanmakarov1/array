@@ -180,7 +180,21 @@ document.querySelector(".b-10").onclick = f10;
 
 let ar11 = [2, 3, 4, 5, 6, 7];
 
-function f11() {}
+function f11() {
+  let a = ar11[2];
+  let b = ar11[4];
+
+  ar11[2] = b;
+  ar11[4] = a;
+
+  let out = "";
+  for (let i = 0; i < ar11.length; i++) {
+    out += ar11[i] + " ";
+  }
+  document.querySelector(".out-11").innerHTML = out;
+}
+  
+
 
 document.querySelector(".b-11").onclick = f11;
 
