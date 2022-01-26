@@ -208,7 +208,19 @@ document.querySelector(".b-11").onclick = f11;
 
 let ar12 = ["test", "west", "list", "class", "best"];
 
-function f12() {}
+function f12() {
+  let start = ar12[0];
+  let end = ar12[ar12.length - 1];
+
+  ar12[ar12.length - 1] = start;
+  ar12[0] = end;
+
+  let out = "";
+  for (let i = 0; i < ar12.length; i++) {
+    out += ar12[i] + " ";
+  }
+  document.querySelector(".out-12").innerHTML = out;
+}
 
 document.querySelector(".b-12").onclick = f12;
 
