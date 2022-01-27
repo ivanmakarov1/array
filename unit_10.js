@@ -195,8 +195,6 @@ function f11() {
   }
   document.querySelector(".out-11").innerHTML = out;
 }
-  
-
 
 document.querySelector(".b-11").onclick = f11;
 
@@ -234,7 +232,10 @@ document.querySelector(".b-12").onclick = f12;
 
 let ar13 = ["test", "west", "list", "class", "best"];
 
-function f13() {}
+function f13() {
+  let out = document.querySelector(".out-13");
+  
+}
 
 document.querySelector(".b-13").onclick = f13;
 
