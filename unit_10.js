@@ -233,7 +233,11 @@ document.querySelector(".b-12").onclick = f12;
 let ar13 = ["test", "west", "list", "class", "best"];
 
 function f13() {
-  let out = document.querySelector(".out-13");
+  let out = "";
+  for (let i = 0; i < ar13.length; i++) {
+    out += ` ${i}  ${ar13[i]} `;
+  }
+  document.querySelector(".out-13").innerHTML = out;
   
 }
 
