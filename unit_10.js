@@ -2,7 +2,7 @@
 //Создайте массив ar1 содержащий строки, числа, булевы значения. Выведите его в .out-1. Вывод - по нажатию кнопки b-1
 
 // let ar1 = // переменную обьявляем здесь!!!!
-let ar1 = [true, " ", 5689, " ", "array", " ", 35.75];
+let ar1 = [true + " " + 5689 + " " + "array" + " " + 35.75];
 
 function f1() {
   document.querySelector(".out-1").innerHTML = ar1;
@@ -128,9 +128,7 @@ function f8() {
   ar8[6] = 5;
   let out = "";
   for (let i = 0; i < ar8.length; i++) {
-    if (ar8[i]) {
-      out += ar8[i] + "-";
-    }
+    out += ar8[i] + "-"; 
   }
   document.querySelector(".out-8").innerHTML = out;
   document.querySelector(".out-8-1").innerHTML = ar8.length;
@@ -290,17 +288,37 @@ let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
-  let out = "";
-  for (let i = 0; i < ar16.length; i++) {
+  // очищаем массивы - если функция будет запускаться еще раз
+  ar16_odd = [];
+  ar16_even = [];
+  
+  // перебираем исходный массив
+  for (let i = 0 ; i < ar16.length; i++) {
     if (ar16[i] % 2 === 0) {
-      out += ar16[i] + " ";
+       // если число четное то добавляем в even
+      ar16_even [ ar16_even.length ] = ar16[i];
+    }
+    else {
+      ar16_odd [ ar16_odd.length ] = ar16[i];
     }
   }
-  document.querySelector(".out-16-even").innerHTML = out;
+  
+  // все массивы заполнены. Их нужно вывести.
+  // выводим первый
+  let out = '';
+  for (let i =0; i < ar16_even.length; i++) {
+    out += ar16_even[i]+' ';
+  }
+  document.querySelector('.out-16-even').innerHTML = out;
+   // выводим второй
+  out = '';
+  for (let i =0; i < ar16_odd.length; i++) {
+    out += ar16_odd[i]+' ';
+  }
+  document.querySelector('.out-16-odd').innerHTML = out;
 }
 
-  
-document.querySelector(".b-16").onclick = f16;
+document.querySelector('.b-16').onclick = f16;
 
 // Task 17
 // Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3. Для расчета используйте цикл и переменную счетчик.
