@@ -238,7 +238,6 @@ function f13() {
     out += ` ${i}  ${ar13[i]} `;
   }
   document.querySelector(".out-13").innerHTML = out;
-  
 }
 
 document.querySelector(".b-13").onclick = f13;
@@ -252,8 +251,8 @@ document.querySelector(".b-13").onclick = f13;
 let ar14 = [1, 2, 3, "hello", 66];
 
 function f14() {
-  let out = '';
-  for(let i = ar14.length - 1; i >= 0; i--){
+  let out = "";
+  for (let i = ar14.length - 1; i >= 0; i--) {
     out += ar14[i] + " ";
   }
   document.querySelector(".out-14").innerHTML = out;
@@ -272,11 +271,11 @@ let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 function f15() {
   let out = "";
   for (let i = 0; i < ar15.length; i++) {
-    if(ar15[i] > 0){
-    out += ar15[i] + " ";
+    if (ar15[i] > 0) {
+      out += ar15[i] + " ";
+    }
   }
-}
-document.querySelector(".out-15").innerHTML = out;
+  document.querySelector(".out-15").innerHTML = out;
 }
 document.querySelector(".b-15").onclick = f15;
 
@@ -290,8 +289,17 @@ let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 let ar16_odd = [];
 let ar16_even = [];
 
-function f16() {}
+function f16() {
+  let out = "";
+  for (let i = 0; i < ar16.length; i++) {
+    if (ar16[i] % 2 === 0) {
+      out += ar16[i] + " ";
+    }
+  }
+  document.querySelector(".out-16-even").innerHTML = out;
+}
 
+  
 document.querySelector(".b-16").onclick = f16;
 
 // Task 17
