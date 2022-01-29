@@ -128,7 +128,7 @@ function f8() {
   ar8[6] = 5;
   let out = "";
   for (let i = 0; i < ar8.length; i++) {
-    out += ar8[i] + "-"; 
+    out += ar8[i] + "-";
   }
   document.querySelector(".out-8").innerHTML = out;
   document.querySelector(".out-8-1").innerHTML = ar8.length;
@@ -291,34 +291,33 @@ function f16() {
   // очищаем массивы - если функция будет запускаться еще раз
   ar16_odd = [];
   ar16_even = [];
-  
+
   // перебираем исходный массив
-  for (let i = 0 ; i < ar16.length; i++) {
+  for (let i = 0; i < ar16.length; i++) {
     if (ar16[i] % 2 === 0) {
-       // если число четное то добавляем в even
-      ar16_even [ ar16_even.length ] = ar16[i];
-    }
-    else {
-      ar16_odd [ ar16_odd.length ] = ar16[i];
+      // если число четное то добавляем в even
+      ar16_even[ar16_even.length] = ar16[i];
+    } else {
+      ar16_odd[ar16_odd.length] = ar16[i];
     }
   }
-  
+
   // все массивы заполнены. Их нужно вывести.
   // выводим первый
-  let out = '';
-  for (let i =0; i < ar16_even.length; i++) {
-    out += ar16_even[i]+' ';
+  let out = "";
+  for (let i = 0; i < ar16_even.length; i++) {
+    out += ar16_even[i] + " ";
   }
-  document.querySelector('.out-16-even').innerHTML = out;
-   // выводим второй
-  out = '';
-  for (let i =0; i < ar16_odd.length; i++) {
-    out += ar16_odd[i]+' ';
+  document.querySelector(".out-16-even").innerHTML = out;
+  // выводим второй
+  out = "";
+  for (let i = 0; i < ar16_odd.length; i++) {
+    out += ar16_odd[i] + " ";
   }
-  document.querySelector('.out-16-odd').innerHTML = out;
+  document.querySelector(".out-16-odd").innerHTML = out;
 }
 
-document.querySelector('.b-16').onclick = f16;
+document.querySelector(".b-16").onclick = f16;
 
 // Task 17
 // Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3. Для расчета используйте цикл и переменную счетчик.
@@ -328,7 +327,15 @@ document.querySelector('.b-16').onclick = f16;
 
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
-function f17() {}
+function f17() {
+  let counter = 0;
+  for (let i = 0; i < ar17.length; i++) {
+    if (ar17[i] > 3) {
+      counter++;
+    }
+  }
+  document.querySelector(".out-17").innerHTML = counter;
+}
 
 document.querySelector(".b-17").onclick = f17;
 
@@ -340,7 +347,15 @@ document.querySelector(".b-17").onclick = f17;
 
 let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
 
-function f18() {}
+function f18() {
+  let max = ar18[0];
+  for (let i = 0; i < ar18.length; i++) {
+    if (ar18[i] > max) {
+      max = ar18[i];
+    }
+  }
+  document.querySelector(".out-18").innerHTML = max;
+}
 
 document.querySelector(".b-18").onclick = f18;
 
