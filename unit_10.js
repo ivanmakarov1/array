@@ -234,7 +234,9 @@ document.querySelector(".b-12").onclick = f12;
 
 let ar13 = ["test", "west", "list", "class", "best"];
 
-function f13() {}
+function f13() {
+  ar13.length
+}
 
 document.querySelector(".b-13").onclick = f13;
 
